@@ -1,8 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1911069809572060');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1911069809572060&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 <title>GAME CHANGER (Abhi) | Cricket Community</title>
 
@@ -13,29 +29,32 @@
     box-sizing:border-box;
 }
 
-html,body{
+html,
+body{
     width:100%;
     min-height:100%;
+    overflow-x:hidden;
     font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
     color:#fff;
     background:#020604;
-    overflow-x:hidden;
 }
 
 /* ================================
-   CRICKET STADIUM BACKGROUND
+   STADIUM BACKGROUND
 ================================ */
 
 .stadium{
     position:fixed;
     inset:0;
     z-index:-5;
+    overflow:hidden;
+
     background:
     linear-gradient(
-        rgba(0,0,0,.50),
+        rgba(0,0,0,.48),
         rgba(0,0,0,.78)
     ),
     radial-gradient(
@@ -54,26 +73,29 @@ body{
 
     background:
     radial-gradient(
-        circle at 12% 12%,
-        rgba(255,255,220,.55),
-        transparent 9%
+        circle at 10% 10%,
+        rgba(255,255,230,.55),
+        transparent 10%
     ),
     radial-gradient(
-        circle at 88% 12%,
-        rgba(255,255,220,.55),
-        transparent 9%
+        circle at 90% 10%,
+        rgba(255,255,230,.55),
+        transparent 10%
     );
-    
-    filter:blur(12px);
+
+    filter:blur(10px);
 }
 
 .stadium:after{
     content:"";
     position:absolute;
+
     left:-10%;
-    bottom:-42%;
+    bottom:-43%;
+
     width:120%;
     height:75%;
+
     border-radius:50%;
 
     background:
@@ -89,19 +111,22 @@ body{
     0 -30px 100px rgba(0,255,120,.18);
 }
 
-/* Stadium lights */
+/* Stadium Lights */
 
 .light{
     position:absolute;
+
     top:5%;
+
     width:220px;
     height:220px;
+
     border-radius:50%;
 
     background:
     radial-gradient(
         circle,
-        rgba(255,255,240,.38),
+        rgba(255,255,240,.4),
         rgba(255,255,240,.08) 35%,
         transparent 70%
     );
@@ -118,22 +143,25 @@ body{
 }
 
 /* ================================
-   TOP LIVE NEWS
+   TOP NEWS BAR
 ================================ */
 
 .news-bar{
     position:fixed;
+
     top:0;
     left:0;
+
     width:100%;
-    height:48px;
+    height:46px;
+
     z-index:50;
 
     display:flex;
     align-items:center;
 
     background:
-    rgba(0,0,0,.92);
+    rgba(0,0,0,.94);
 
     border-bottom:
     1px solid rgba(255,193,7,.55);
@@ -144,8 +172,11 @@ body{
 .live{
     flex:0 0 auto;
 
-    margin-left:8px;
-    padding:7px 13px;
+    margin-left:7px;
+
+    padding:
+    7px
+    12px;
 
     border-radius:8px;
 
@@ -156,27 +187,30 @@ body{
         #a80000
     );
 
-    font-size:12px;
+    font-size:11px;
     font-weight:900;
 
     box-shadow:
     0 0 18px rgba(255,0,0,.55);
 
-    animation:livePulse 1.5s infinite;
+    animation:
+    livePulse 1.5s infinite;
 }
 
 .news-track{
     display:flex;
+
     white-space:nowrap;
 
     animation:
-    newsScroll 28s linear infinite;
+    newsScroll 30s linear infinite;
 }
 
 .news-item{
     margin-left:45px;
 
-    font-size:12px;
+    font-size:11px;
+
     font-weight:800;
 
     color:#f7d34d;
@@ -187,40 +221,48 @@ body{
 }
 
 /* ================================
-   MAIN CONTENT
+   MAIN CONTAINER
 ================================ */
 
 .container{
     width:100%;
-    min-height:100vh;
+    min-height:100svh;
 
     padding:
-    68px
-    15px
-    80px;
+    64px
+    12px
+    58px;
 
     display:flex;
-    justify-content:center;
+
     align-items:center;
+    justify-content:center;
 }
+
+/* ================================
+   CARD
+================================ */
 
 .card{
     width:100%;
-    max-width:460px;
-
-    padding:26px 20px 25px;
+    max-width:440px;
 
     position:relative;
 
+    padding:
+    25px
+    18px
+    22px;
+
     text-align:center;
 
-    border-radius:28px;
+    border-radius:27px;
 
     background:
     linear-gradient(
         145deg,
-        rgba(5,15,10,.92),
-        rgba(2,5,3,.88)
+        rgba(5,15,10,.93),
+        rgba(2,5,3,.9)
     );
 
     border:
@@ -230,12 +272,10 @@ body{
     0 30px 100px rgba(0,0,0,.85),
     0 0 45px rgba(255,170,0,.12);
 
-    backdrop-filter:blur(12px);
+    backdrop-filter:blur(13px);
 
     overflow:hidden;
 }
-
-/* Golden glow */
 
 .card:before{
     content:"";
@@ -253,9 +293,42 @@ body{
     border-radius:50%;
 
     background:
-    rgba(255,180,0,.15);
+    rgba(255,180,0,.14);
 
     filter:blur(55px);
+}
+
+/* ================================
+   BADGE
+================================ */
+
+.badge{
+    position:relative;
+    z-index:5;
+
+    display:inline-block;
+
+    padding:
+    7px
+    14px;
+
+    margin-bottom:14px;
+
+    border-radius:30px;
+
+    color:#f3d477;
+
+    font-size:10px;
+
+    font-weight:900;
+
+    letter-spacing:1.2px;
+
+    background:
+    rgba(212,175,55,.08);
+
+    border:
+    1px solid rgba(212,175,55,.4);
 }
 
 /* ================================
@@ -266,14 +339,14 @@ body{
     position:relative;
     z-index:5;
 
-    width:145px;
-    height:145px;
+    width:135px;
+    height:135px;
 
     margin:
-    0 auto 17px;
+    0
+    auto
+    16px;
 }
-
-/* Glow Ring */
 
 .logo-wrap:before{
     content:"";
@@ -301,8 +374,6 @@ body{
     drop-shadow(0 0 28px #ff5a00);
 }
 
-/* Logo */
-
 .logo{
     position:relative;
     z-index:2;
@@ -310,9 +381,9 @@ body{
     width:100%;
     height:100%;
 
-    border-radius:50%;
-
     padding:4px;
+
+    border-radius:50%;
 
     background:#080808;
 
@@ -327,6 +398,8 @@ body{
     width:100%;
     height:100%;
 
+    display:block;
+
     object-fit:cover;
 
     border-radius:50%;
@@ -340,13 +413,13 @@ h1{
     position:relative;
     z-index:5;
 
-    font-size:31px;
+    font-size:29px;
+
+    line-height:1.2;
 
     font-weight:1000;
 
     letter-spacing:1px;
-
-    text-transform:uppercase;
 
     color:#fff;
 
@@ -358,31 +431,35 @@ h1{
 h1 span{
     display:block;
 
-    margin-top:3px;
+    margin-top:4px;
 
-    font-size:20px;
+    font-size:19px;
 
     color:#ffb300;
 
     font-style:italic;
 }
 
-/* Subtitle */
+/* ================================
+   DESCRIPTION
+================================ */
 
 .subtitle{
     position:relative;
     z-index:5;
 
-    margin:
-    11px auto 18px;
+    max-width:350px;
 
-    max-width:370px;
+    margin:
+    10px
+    auto
+    16px;
 
     color:#d3ddd6;
 
-    font-size:13px;
+    font-size:12px;
 
-    line-height:1.6;
+    line-height:1.55;
 }
 
 /* ================================
@@ -398,15 +475,17 @@ h1 span{
     grid-template-columns:
     repeat(3,1fr);
 
-    gap:8px;
+    gap:7px;
 
-    margin-bottom:19px;
+    margin-bottom:16px;
 }
 
 .feature{
-    padding:11px 4px;
+    padding:
+    10px
+    3px;
 
-    border-radius:13px;
+    border-radius:12px;
 
     background:
     rgba(255,255,255,.035);
@@ -416,7 +495,7 @@ h1 span{
 
     color:#fff;
 
-    font-size:10px;
+    font-size:9px;
 
     font-weight:800;
 }
@@ -424,9 +503,9 @@ h1 span{
 .feature b{
     display:block;
 
-    margin-bottom:4px;
+    margin-bottom:3px;
 
-    font-size:18px;
+    font-size:17px;
 
     color:#ffbd20;
 }
@@ -439,11 +518,13 @@ h1 span{
     position:relative;
     z-index:5;
 
-    padding:12px 10px;
+    padding:
+    10px
+    7px;
 
-    margin-bottom:18px;
+    margin-bottom:16px;
 
-    border-radius:15px;
+    border-radius:13px;
 
     background:
     linear-gradient(
@@ -458,15 +539,15 @@ h1 span{
 }
 
 .series-title{
-    font-size:18px;
+    font-size:16px;
     font-weight:1000;
 }
 
-.series-title .india{
+.india{
     color:#48aaff;
 }
 
-.series-title .zim{
+.zim{
     color:#64d34e;
 }
 
@@ -475,34 +556,34 @@ h1 span{
 
     color:#f5d34f;
 
-    font-size:11px;
+    font-size:9px;
 
     font-weight:900;
 
-    letter-spacing:.5px;
+    letter-spacing:.3px;
 }
 
 /* ================================
-   CTA BUTTON
+   CTA AREA
 ================================ */
 
 .cta-wrap{
     position:relative;
     z-index:5;
 
-    margin-top:8px;
+    margin-top:4px;
 }
 
-/* Moving Cricket Ball */
+/* Cricket Ball */
 
 .cta-ball{
     position:absolute;
 
-    left:10px;
+    left:9px;
     top:50%;
 
-    width:30px;
-    height:30px;
+    width:27px;
+    height:27px;
 
     transform:
     translateY(-50%);
@@ -531,11 +612,11 @@ h1 span{
 .cta-bat{
     position:absolute;
 
-    right:8px;
+    right:7px;
     top:50%;
 
-    width:48px;
-    height:10px;
+    width:43px;
+    height:9px;
 
     transform:
     translateY(-50%)
@@ -557,10 +638,14 @@ h1 span{
     batMove 3s ease-in-out infinite;
 }
 
+/* Button */
+
 .cta{
     position:relative;
 
     width:100%;
+
+    min-height:54px;
 
     display:flex;
 
@@ -568,19 +653,21 @@ h1 span{
 
     justify-content:center;
 
-    padding:18px 55px;
+    padding:
+    16px
+    45px;
 
-    border-radius:17px;
+    border-radius:16px;
 
     text-decoration:none;
 
     color:#170900;
 
-    font-size:15px;
+    font-size:14px;
 
     font-weight:1000;
 
-    letter-spacing:.4px;
+    letter-spacing:.3px;
 
     background:
     linear-gradient(
@@ -602,7 +689,8 @@ h1 span{
     animation:
     buttonPulse 2s infinite;
 
-    transition:.25s;
+    transition:
+    transform .25s;
 }
 
 .cta:before{
@@ -611,7 +699,6 @@ h1 span{
     position:absolute;
 
     left:-120%;
-
     top:0;
 
     width:70%;
@@ -648,8 +735,7 @@ h1 span{
     left:0;
 
     width:100%;
-
-    height:45px;
+    height:42px;
 
     z-index:50;
 
@@ -658,7 +744,7 @@ h1 span{
     align-items:center;
 
     background:
-    rgba(0,0,0,.94);
+    rgba(0,0,0,.95);
 
     border-top:
     1px solid rgba(255,193,7,.55);
@@ -669,7 +755,9 @@ h1 span{
 .bottom-title{
     flex:0 0 auto;
 
-    padding:8px 14px;
+    padding:
+    7px
+    11px;
 
     background:
     linear-gradient(
@@ -678,7 +766,7 @@ h1 span{
         #9e0000
     );
 
-    font-size:12px;
+    font-size:10px;
 
     font-weight:900;
 }
@@ -689,13 +777,13 @@ h1 span{
     white-space:nowrap;
 
     animation:
-    bottomScroll 30s linear infinite;
+    bottomScroll 32s linear infinite;
 }
 
 .bottom-item{
-    margin-left:40px;
+    margin-left:35px;
 
-    font-size:11px;
+    font-size:10px;
 
     font-weight:800;
 
@@ -706,28 +794,30 @@ h1 span{
     color:#ffcf35;
 }
 
-/* Footer */
+/* ================================
+   FOOTER
+================================ */
 
 .note{
     position:relative;
     z-index:5;
 
-    margin-top:12px;
+    margin-top:10px;
 
     color:#89988f;
 
-    font-size:10px;
+    font-size:9px;
 }
 
 .footer{
     position:relative;
     z-index:5;
 
-    margin-top:15px;
+    margin-top:12px;
 
     color:#52645a;
 
-    font-size:9px;
+    font-size:8px;
 }
 
 /* ================================
@@ -735,12 +825,15 @@ h1 span{
 ================================ */
 
 @keyframes rotate{
+
     to{
         transform:rotate(360deg);
     }
+
 }
 
 @keyframes livePulse{
+
     0%,100%{
         box-shadow:
         0 0 12px rgba(255,0,0,.4);
@@ -750,9 +843,11 @@ h1 span{
         box-shadow:
         0 0 28px rgba(255,0,0,.85);
     }
+
 }
 
 @keyframes newsScroll{
+
     from{
         transform:translateX(0);
     }
@@ -760,9 +855,11 @@ h1 span{
     to{
         transform:translateX(-55%);
     }
+
 }
 
 @keyframes bottomScroll{
+
     from{
         transform:translateX(0);
     }
@@ -770,9 +867,11 @@ h1 span{
     to{
         transform:translateX(-55%);
     }
+
 }
 
 @keyframes buttonPulse{
+
     0%,100%{
         box-shadow:
         0 0 20px rgba(255,170,0,.45),
@@ -784,9 +883,11 @@ h1 span{
         0 0 40px rgba(255,170,0,.9),
         0 10px 50px rgba(255,80,0,.5);
     }
+
 }
 
 @keyframes buttonShine{
+
     0%{
         left:-120%;
     }
@@ -798,9 +899,11 @@ h1 span{
     100%{
         left:140%;
     }
+
 }
 
 @keyframes ballMove{
+
     0%,100%{
         transform:
         translateY(-50%)
@@ -812,9 +915,11 @@ h1 span{
         translateY(-50%)
         rotate(360deg);
     }
+
 }
 
 @keyframes batMove{
+
     0%,100%{
         transform:
         translateY(-50%)
@@ -826,62 +931,544 @@ h1 span{
         translateY(-50%)
         rotate(5deg);
     }
+
 }
 
+
 /* ================================
-   MOBILE
+   TABLET
 ================================ */
 
-@media(max-width:400px){
+@media(max-width:768px){
 
     .container{
         padding:
-        62px
-        10px
-        58px;
+        60px
+        12px
+        55px;
     }
 
     .card{
-        padding:
-        23px
-        15px;
+        max-width:430px;
     }
 
     .logo-wrap{
-        width:125px;
-        height:125px;
+        width:120px;
+        height:120px;
+    }
+
+}
+
+
+/* ================================
+   MOBILE 480px
+================================ */
+
+@media(max-width:480px){
+
+    .container{
+
+        min-height:100svh;
+
+        padding:
+        56px
+        9px
+        50px;
+
+        align-items:center;
+    }
+
+    .card{
+
+        width:100%;
+
+        padding:
+        20px
+        12px
+        18px;
+
+        border-radius:21px;
+    }
+
+    .badge{
+
+        font-size:8px;
+
+        letter-spacing:.8px;
+
+        padding:
+        6px
+        9px;
+
+        margin-bottom:10px;
+    }
+
+    .logo-wrap{
+
+        width:102px;
+        height:102px;
+
+        margin-bottom:11px;
     }
 
     h1{
-        font-size:25px;
+
+        font-size:22px;
+
+        line-height:1.15;
     }
 
     h1 span{
-        font-size:17px;
+
+        font-size:15px;
+
+        margin-top:3px;
     }
 
     .subtitle{
-        font-size:12px;
+
+        font-size:10px;
+
+        line-height:1.45;
+
+        max-width:290px;
+
+        margin:
+        7px
+        auto
+        11px;
+    }
+
+    .features{
+
+        gap:4px;
+
+        margin-bottom:11px;
+    }
+
+    .feature{
+
+        padding:
+        7px
+        2px;
+
+        border-radius:9px;
+
+        font-size:7px;
+    }
+
+    .feature b{
+
+        font-size:14px;
+
+        margin-bottom:2px;
+    }
+
+    .series{
+
+        padding:
+        8px
+        4px;
+
+        margin-bottom:11px;
+
+        border-radius:10px;
+    }
+
+    .series-title{
+
+        font-size:13px;
+    }
+
+    .series-sub{
+
+        font-size:7px;
+
+        margin-top:3px;
     }
 
     .cta{
-        font-size:13px;
+
+        min-height:48px;
+
         padding:
-        16px 48px;
+        13px
+        40px;
+
+        border-radius:13px;
+
+        font-size:11px;
     }
 
-    .news-item,
+    .cta-ball{
+
+        width:21px;
+        height:21px;
+
+        left:6px;
+    }
+
+    .cta-bat{
+
+        width:32px;
+        height:7px;
+
+        right:5px;
+    }
+
+    .note{
+
+        font-size:7px;
+
+        margin-top:7px;
+    }
+
+    .footer{
+
+        font-size:7px;
+
+        margin-top:7px;
+    }
+
+    .news-bar{
+
+        height:38px;
+    }
+
+    .live{
+
+        margin-left:4px;
+
+        padding:
+        5px
+        7px;
+
+        font-size:8px;
+    }
+
+    .news-item{
+
+        font-size:8px;
+
+        margin-left:20px;
+    }
+
+    .bottom-news{
+
+        height:36px;
+    }
+
+    .bottom-title{
+
+        padding:
+        6px
+        7px;
+
+        font-size:7px;
+    }
+
     .bottom-item{
-        font-size:10px;
+
+        font-size:7px;
+
+        margin-left:16px;
+    }
+
+    .light{
+
+        width:140px;
+        height:140px;
     }
 }
+
+
+/* ================================
+   SMALL MOBILE 360px
+================================ */
+
+@media(max-width:360px){
+
+    .container{
+
+        padding:
+        51px
+        6px
+        45px;
+    }
+
+    .card{
+
+        padding:
+        15px
+        9px
+        14px;
+
+        border-radius:18px;
+    }
+
+    .badge{
+
+        font-size:7px;
+
+        padding:
+        5px
+        7px;
+
+        margin-bottom:8px;
+    }
+
+    .logo-wrap{
+
+        width:82px;
+        height:82px;
+
+        margin-bottom:8px;
+    }
+
+    h1{
+
+        font-size:19px;
+    }
+
+    h1 span{
+
+        font-size:13px;
+    }
+
+    .subtitle{
+
+        font-size:9px;
+
+        max-width:260px;
+
+        margin:
+        5px
+        auto
+        8px;
+    }
+
+    .features{
+
+        margin-bottom:8px;
+    }
+
+    .feature{
+
+        padding:
+        6px
+        1px;
+
+        font-size:6px;
+    }
+
+    .feature b{
+
+        font-size:12px;
+    }
+
+    .series{
+
+        padding:
+        6px
+        3px;
+
+        margin-bottom:8px;
+    }
+
+    .series-title{
+
+        font-size:11px;
+    }
+
+    .series-sub{
+
+        font-size:6px;
+    }
+
+    .cta{
+
+        min-height:43px;
+
+        padding:
+        11px
+        34px;
+
+        font-size:9px;
+    }
+
+    .cta-ball{
+
+        width:18px;
+        height:18px;
+
+        left:5px;
+    }
+
+    .cta-bat{
+
+        width:27px;
+        height:6px;
+
+        right:4px;
+    }
+
+    .note{
+
+        font-size:6px;
+
+        margin-top:5px;
+    }
+
+    .footer{
+
+        font-size:6px;
+
+        margin-top:5px;
+    }
+
+    .news-bar{
+
+        height:34px;
+    }
+
+    .live{
+
+        font-size:7px;
+
+        padding:
+        4px
+        5px;
+    }
+
+    .news-item{
+
+        font-size:7px;
+
+        margin-left:15px;
+    }
+
+    .bottom-news{
+
+        height:32px;
+    }
+
+    .bottom-title{
+
+        font-size:6px;
+
+        padding:
+        5px
+        5px;
+    }
+
+    .bottom-item{
+
+        font-size:6px;
+
+        margin-left:13px;
+    }
+}
+
+
+/* ================================
+   VERY SMALL 320px
+================================ */
+
+@media(max-width:320px){
+
+    .container{
+
+        padding-left:4px;
+        padding-right:4px;
+    }
+
+    .card{
+
+        padding:
+        12px
+        7px;
+    }
+
+    .logo-wrap{
+
+        width:70px;
+        height:70px;
+    }
+
+    h1{
+
+        font-size:17px;
+    }
+
+    h1 span{
+
+        font-size:11px;
+    }
+
+    .subtitle{
+
+        font-size:8px;
+
+        max-width:230px;
+    }
+
+    .features{
+
+        gap:2px;
+    }
+
+    .feature{
+
+        font-size:5px;
+    }
+
+    .feature b{
+
+        font-size:11px;
+    }
+
+    .series-title{
+
+        font-size:10px;
+    }
+
+    .series-sub{
+
+        font-size:5px;
+    }
+
+    .cta{
+
+        font-size:8px;
+
+        padding-left:30px;
+        padding-right:30px;
+    }
+
+    .cta-ball{
+
+        width:16px;
+        height:16px;
+
+        left:4px;
+    }
+
+    .cta-bat{
+
+        width:23px;
+
+        right:3px;
+    }
+}
+
 </style>
 </head>
 
 <body>
 
+
 <!-- ================================
-     STADIUM
+     CRICKET STADIUM
 ================================ -->
 
 <div class="stadium">
@@ -906,7 +1493,7 @@ h1 span{
     <div class="news-track">
 
         <div class="news-item">
-            🏏 <span>INDIA vs ZIMBABWE — NEW SERIES STARTS</span>
+            🏏 <span>INDIA vs ZIMBABWE — NEW SERIES UPDATES</span>
         </div>
 
         <div class="news-item">
@@ -925,13 +1512,23 @@ h1 span{
             🏆 <span>STAY CONNECTED FOR LATEST CRICKET UPDATES</span>
         </div>
 
+        <!-- Duplicate for continuous scrolling -->
+
+        <div class="news-item">
+            🏏 <span>INDIA vs ZIMBABWE — NEW SERIES UPDATES</span>
+        </div>
+
+        <div class="news-item">
+            🔥 <span>VAIBHAV SOORYAVANSHI IN FOCUS</span>
+        </div>
+
     </div>
 
 </div>
 
 
 <!-- ================================
-     MAIN LANDING PAGE
+     MAIN CONTENT
 ================================ -->
 
 <div class="container">
@@ -944,11 +1541,16 @@ h1 span{
     </div>
 
 
-    <!-- LOGO -->
+    <!-- ============================
+         LOGO
+    ============================= -->
 
     <!--
-    Aapki uploaded image ko logo.jpg naam dein
-    aur index.html ke same folder mein rakhein.
+    Aapki uploaded image ko "logo.jpg"
+    naam se save karein.
+
+    logo.jpg aur index.html
+    same folder mein rakhein.
     -->
 
     <div class="logo-wrap">
@@ -964,6 +1566,10 @@ h1 span{
 
     </div>
 
+
+    <!-- ============================
+         TITLE
+    ============================= -->
 
     <h1>
 
@@ -984,6 +1590,10 @@ h1 span{
 
     </p>
 
+
+    <!-- ============================
+         FEATURES
+    ============================= -->
 
     <div class="features">
 
@@ -1018,7 +1628,9 @@ h1 span{
     </div>
 
 
-    <!-- INDIA ZIMBABWE SERIES -->
+    <!-- ============================
+         SERIES BOX
+    ============================= -->
 
     <div class="series">
 
@@ -1038,38 +1650,44 @@ h1 span{
 
         <div class="series-sub">
 
-            NEW SERIES BEGINS • ALL EYES ON VAIBHAV SOORYAVANSHI
+            NEW SERIES • ALL EYES ON VAIBHAV SOORYAVANSHI
 
         </div>
 
     </div>
 
 
-    <!-- ANIMATED CTA -->
+    <!-- ============================
+         ANIMATED TELEGRAM BUTTON
+    ============================= -->
 
     <div class="cta-wrap">
 
+
         <div class="cta-ball"></div>
 
+
         <div class="cta-bat"></div>
+
 
         <a
             class="cta"
             href="https://t.me/+o-KT1hqeEWdlZDk1"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
         >
 
             JOIN TELEGRAM CHANNEL
 
         </a>
 
+
     </div>
 
 
     <div class="note">
 
-        🏏 Stay updated • Stay connected • Be a Game Changer
+        🏏 Stay Updated • Stay Connected • Be a Game Changer
 
     </div>
 
@@ -1092,6 +1710,7 @@ h1 span{
 
 <div class="bottom-news">
 
+
     <div class="bottom-title">
 
         CRICKET NEWS
@@ -1104,35 +1723,58 @@ h1 span{
 
         <div class="bottom-item">
 
-            🔥 <span>India vs Zimbabwe</span> — New Series Updates
+            🔥 <span>India vs Zimbabwe</span>
+            — New Series Updates
 
         </div>
 
 
         <div class="bottom-item">
 
-            ⭐ <span>Vaibhav Sooryavanshi</span> — Young Talent In Focus
+            ⭐ <span>Vaibhav Sooryavanshi</span>
+            — Young Talent In Focus
 
         </div>
 
 
         <div class="bottom-item">
 
-            🏏 <span>Team India</span> — Latest Match News
+            🏏 <span>Team India</span>
+            — Latest Match News
 
         </div>
 
 
         <div class="bottom-item">
 
-            ⚡ <span>Game Changer</span> — Stay Connected
+            ⚡ <span>Game Changer</span>
+            — Stay Connected
 
         </div>
 
 
         <div class="bottom-item">
 
-            🏆 <span>Cricket Community</span> — Latest Updates
+            🏆 <span>Cricket Community</span>
+            — Latest Updates
+
+        </div>
+
+
+        <!-- Duplicate -->
+
+        <div class="bottom-item">
+
+            🔥 <span>India vs Zimbabwe</span>
+            — New Series Updates
+
+        </div>
+
+
+        <div class="bottom-item">
+
+            ⭐ <span>Vaibhav Sooryavanshi</span>
+            — Young Talent In Focus
 
         </div>
 
